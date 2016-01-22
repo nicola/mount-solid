@@ -1,0 +1,30 @@
+{
+  "name": "mount-solid",
+  "version": "0.1.0",
+  "description": "Mount Solid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicola/mount-solid"
+  },
+  "keywords": [
+    "fuse",
+    "solid",
+    "decentralized",
+    "web",
+    "crosscloud"
+  ],
+  "author": "Nicola Greco <me@nicola.io> (http://nicolagreco.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicola/mount-solid/issues"
+  },
+  "homepage": "https://github.com/nicola/mount-solid",
+  "dependencies": {
+    "fuse-bindings": "^2.8.1",
+    "simplerdf": "^0.2.5"
+  }
+}
