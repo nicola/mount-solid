@@ -48,13 +48,13 @@ function getFolder (path, cached, cb) {
     return cb(typeof file === 'number' ? file : 0, file)
   }
 
-  console.log(src + path)
+  // console.log(src + path)
   simple(container, src + path + '/').get().then(function (g) {
     g.container = true
     fs[path] = g
     cb(0, g)
   }, function (err) {
-    console.log(err)
+    // console.log(err)
     if (typeof err === 'string') err = new Error(err)
     if (err.message.split(': ')[1] === '301') {
       return getFolder(path + '/', true, cb)
@@ -82,7 +82,7 @@ function getPathAttr (path) {
       p.container = true
     }
   }
-  console.log(path)
+  // console.log(path)
   return p
 }
 
@@ -94,7 +94,7 @@ getFolder('/', true, function (err) {
     force: true,
     displayFolder: true,
     readdir: function (path, cb) {
-      console.log('readdir(%s)', path)
+      // console.log('readdir(%s)', path)
       getFolder(path, true, function (err, g) {
         if (err) return cb(err)
         var contains = g.contains.map(function (url) {
@@ -105,7 +105,7 @@ getFolder('/', true, function (err) {
       })
     },
     getattr: function (path, cb) {
-      console.log('getattr(%s)', path)
+      // console.log('getattr(%s)', path)
       var p = getPathAttr(path)
 
       if (typeof p === 'number') {
@@ -133,7 +133,7 @@ getFolder('/', true, function (err) {
 
       fds[fd] = {offset: 0}
 
-      console.log('open()', path, fd)
+      // console.log('open()', path, fd)
       cb(0, fd)
     },
     read: function (path, fd, buf, len, pos, cb) {
