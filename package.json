@@ -26,5 +26,8 @@
   "dependencies": {
     "fuse-bindings": "^2.8.1",
     "simplerdf": "^0.2.5"
+  },
+  "bin": {
+    "mount-solid": "./index.js"
   }
 }
