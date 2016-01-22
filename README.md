@@ -1,6 +1,5 @@
 # mount-solid
-
-![](https://raw.githubusercontent.com/nicola/mount-solid/master/logo.png)
+<img src="https://raw.githubusercontent.com/nicola/mount-solid/master/logo.png" width="30%">
 
 Mount a solid endpoint on your file-system
 
